@@ -80,27 +80,27 @@ p{margin:0}
 
 <section class="timeline-section" aria-labelledby="timeline-title">
 <h2 id="timeline-title">Deployment plan</h2>
-<div class="table-head" aria-hidden="true"><span>Indicative timing</span><span>Work I would own</span><span>Decision required</span></div>
-<ol class="timeline" aria-label="Deployment stages, implementation work, and customer decisions">
+<div class="table-head" aria-hidden="true"><span>Suggested timing</span><span>What I’d do</span><span>When to move forward</span></div>
+<ol class="timeline" aria-label="Deployment stages, work, and conditions for moving forward">
 <li class="step">
  <div class="time">Days 1–3</div>
- <div class="event"><h3>Discover the workflow</h3><p>Walk through recent applications with brokers, including cases that needed correction or insurer review. Record who handles each step, required access, and current handling time.</p></div>
- <div class="decision"><span class="outcome">Agree the pilot scope</span><p>Agree approvers, eligible cases, and success gates with operations. Narrow scope until every handoff has an owner.</p></div>
+ <div class="event"><h3>Understand the current process</h3><p>Follow recent cyber applications from the first email to insurer responses. Identify documents, missing information, approvals, systems, and time spent.</p></div>
+ <div class="decision"><span class="outcome">Agree what the pilot covers</span><p>Everyone agrees which cases to include and who owns each step.</p></div>
 </li>
 <li class="step">
  <div class="time">Days 4–7</div>
- <div class="event"><h3>Configure team rules</h3><p>Confirm how to handle missing or unclear answers with the brokerage’s insurance lead. Keep the original information and document approved rules with the engineer.</p></div>
- <div class="decision"><span class="outcome">Approve the configuration</span><p>The insurance lead approves business rules; the engineer checks insurer requirements and access. Report product gaps with a repeatable example and customer impact.</p></div>
+ <div class="event"><h3>Set up Babbix for that process</h3><p>With the brokerage and Herald specialists, agree what information to capture, which insurers to approach, when to ask questions, and what needs broker approval. Check access and available connections.</p></div>
+ <div class="decision"><span class="outcome">Approve the setup</span><p>The customer approves the instructions, and the engineer confirms the setup works.</p></div>
 </li>
 <li class="step">
  <div class="time">Week 2</div>
- <div class="event"><h3>Test before sending</h3><p>Compare Babbix’s work with broker-reviewed cases. Test missing information, changes after approval, and requests where delivery is uncertain.</p></div>
- <div class="decision"><span class="outcome">Resolve material failures</span><p>No external actions until disagreements are resolved, live checks pass, and manual recovery works.</p></div>
+ <div class="event"><h3>Test representative cases</h3><p>Check that Babbix reads information correctly, spots missing answers, follows insurer requirements, and handles changed information or uncertain delivery correctly.</p></div>
+ <div class="decision"><span class="outcome">Ready for live use</span><p>Important failures are fixed before live sending, and staff know how to take over manually.</p></div>
 </li>
 <li class="step">
  <div class="time">Week 3</div>
- <div class="event"><h3>Launch with one team</h3><p>Train a champion on actual cases. Own daily exception review and a weekly sponsor update on use, review burden, and decisions needed.</p></div>
- <div class="decision"><span class="outcome">Pause if accuracy slips</span><p>Pause the affected workflow on material errors. Return to manual handling while the issue is investigated and corrected.</p></div>
+ <div class="event"><h3>Launch with a small group</h3><p>Train brokers using actual cases. Review problems and measure total handling time, including checking and corrections. Pause affected work if important errors occur.</p></div>
+ <div class="decision"><span class="outcome">Decide whether to expand</span><p>Expand when quality meets the agreed standard and the workflow consistently reduces effort.</p></div>
 </li>
 </ol>
 </section>
@@ -109,7 +109,7 @@ p{margin:0}
 <h2 id="checks-title">Configuration checks</h2>
 <ul class="reviews">
 <li><strong>Unclear information</strong><p>If a business gives a range, confirm what is being counted and whether the insurer accepts an estimate. Ask for clarification when an exact answer is required.</p></li>
-<li><strong>Facts or insurers change</strong><p>Get approval again if the information or selected insurers change. Before sending, check that the dynamic application is complete and the broker has access to every selected product.</p></li>
+<li><strong>Facts or insurers change</strong><p>Get approval again if the information or selected insurers change. For API submissions, check product access and, when using a dynamic application, that it is complete.</p></li>
 <li><strong>Submission times out</strong><p>Check whether the insurer received the application before sending it again. Fix invalid data; treat an insurer’s decision not to offer cover as a separate outcome.</p></li>
 </ul>
 </section>
